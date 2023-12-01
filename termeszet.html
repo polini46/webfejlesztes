@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Japán bemutatása, tanuló weboldal">
+    <meta name="author" content="Simon Patrik">
+    <meta name="copyright" content="Tanulási célra">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link href="style.css" rel="stylesheet">
+    <title>Japán kultúra - Természet</title>
+    <script src="galleria-1.6.1/jquery-3.7.1.min.js"></script>
+    <script src="galleria-1.6.1/dist/galleria.min.js"></script>
+    <script src="galleria-1.6.1/dist/themes/classic/galleria.classic.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#galleria').galleria({ height: 500 });
+        })
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div></div> <!-- üres div a flexbox miatt :) -->
+        <a href="index.html" title="Kattints ide a főoldalhoz!">
+            <table id="logo">
+                <tr>
+                    <td class="td_logo">
+                        <p class="cim"><span class="piros">●</span> Japán kultúra 日本</p>
+                        <p class="cim2">Természet — Ipar — Hagyományok</p>
+                    <td class="td_logo">
+                        <hr id="hr_logo">
+                    <td class="td_logo"><img id="hollo" src="img/hollo.svg" alt="Holló"></td>
+                </tr>
+            </table>
+        </a>
+        <div id="nightmode"><a href="#"><img id="nightmode2" src="img/nightmode.svg" alt="Éjszakai mód"></a>
+        </div>
+    </header>
+    <div class="container"> <!-- container -->
+        <nav> <!-- menürendszer  -->
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a class="active" href="#">Természet</a></li>
+                <li><a href="ipar.html">Ipar</a></li>
+                <li><a href="hagyomanyok.html">Hagyományok</a></li>
+                <li><a href="shop.html">- Shop -</a></li>
+            </ul>
+        </nav>
+
+        <article id="felsoarticle">
+            <h1>Japán kultúra - Természet ⛩️</h1>
+            <h3>Tudtad?</h3>
+            <p>
+                Japán területének nagyjából 73-75 százaléka hegyes vagy dombos terület. Az ország földrajzi jellemzői
+                nagymértékben befolyásolják ezt az arányt. Japán ma is geológiailag aktív terület, a földrengések szinte
+                "mindennaposak", és több vulkánikus eredetű hegységgel rendelkezik.</p>
+            <p>Ennek eredményeképpen az ország területének jelentős részét hegyvidékek, hegyek és dombok teszik ki, így
+                az ingatlanárak is rendkívül magasak. Az ilyen területek sok esetben nehezen lakhatók vagy művelhetők,
+                így az emberek főként az alacsonyabban fekvő, sík vidékeken, valamint a hegyek pereménél vagy lejtőin
+                telepedtek le.</p>
+        </article>
+        <aside id="vicc">
+            <h3>Ettől lefáradsz!😉</h3>
+            <p>Hogy hívják a japán fordászt?<br> - Hajasima</p>
+        </aside>
+
+        <aside id="terkep">
+            <h3>Érdekesség</h3>
+            <p>A japánok nagyon természettisztelők, a környezettel való eggyé válás a kultúrájuk része. Innen származnak
+                az <span class="bold">"egyensúlyozó kövek"</span> is, melyek szimbolikus jelentőségűek: ember és
+                természet egységét jelképezik.</p>
+            <a href="img/kovek.jpg" target="_blank"><img id="terkep2" src="img/kovek.jpg" alt="Egyensúlyozó kövek"></a>
+            <p>Tokióban most ennyi az idő:<br><a id="japanido"></a><br>Ezért ott most így köszönnek:<br><a
+                    id="koszones"></a></p>
+        </aside>
+
+        <article id="foelem2">
+            <h3>A japán hegyvidék</h3>
+            <hr>
+            <p><a href="img/sakura.jpg" target="_blank"><img class="balrazart" src="img/sakura.jpg"
+                        alt="Sakura virágzás"></a>Japán lenyűgöző természeti adottságai között találhatók olyan kincsek,
+                amelyek megkapóan szép és különleges élményt nyújtanak az odalátogatóknak. Az oszakai
+                cseresznyevirágzás, ismert japán nevén <span class="bold">"sakura"</span>, káprázatos látványt nyújt
+                tavasszal. A város parkjai és utcái ekkor borulnak virágba, teremtve egy varázslatos rózsaszín ködöt,
+                ami egyedi és gyönyörű atmoszférát teremt az egész városban. Ez a néhány napos időszak igazi
+                túristacsalogató!</p>
+
+            <p><a href="img/fuji.jpg" target="_blank"><img class="jobbrazart" src="img/fuji.jpg" alt="Fuji-hegy"></a>A
+                <span class="bold">Fuji-hegy, vagy Fujiyama</span>, Japán legmagasabb hegye, ikonikus és szent hegyként
+                tisztelt a japán kultúrában. A tökéletesen kerek tetejű vulkán, csúcsán a panorámás kilátással,
+                lenyűgöző látványt nyújt mindazoknak, akik megmásszák vagy csak nézik a távolból. A japán hegyvidékek és
+                erdők gazdag és változatos tájakat kínálnak, amelyek jelentős részét képezik az ország területének. Ezek
+                a területek hozzájárulnak Japán lenyűgöző és változatos tájainak sokféleségéhez.</p>
+
+            <p>Az ország jelentős részén hegyvidéki területek húzódnak, amelyek sok esetben vulkanikus eredetűek. Ezek a
+                hegyek gyakran gazdag növény- és állatvilággal rendelkeznek, és lenyűgöző panorámás kilátást nyújtanak.
+                A magas hegyek, mint például a <span class="bold">japán Alpok (Japanese Alps)</span> és a <span
+                    class="bold">Kitadake-hegy (Mount Kitadake)</span>, különleges turisztikai célpontok, amelyek
+                népszerűek hegymászók, túrázók és természetkedvelők körében egyaránt. Az erdők Japánban szintén jelentős
+                szerepet töltenek be. Rengeteg erdős terület található az országban, amelyek gyakran összekapcsolódnak a
+                hegyvidékekkel. Ezek az erdők változatosak lehetnek, magukban foglalva őszi lombhullató erdőket,
+                örökzöldekkel borított területeket és bambuszligeteket is. Az erdők Japánban nem csupán a természeti
+                környezet részei, hanem kulturális jelentőséggel is bírnak, és sok esetben szent helyeknek számítanak a
+                japán vallásos és spirituális hagyományokban. Ezek az elvarázsolt hegyvidékek és erdős területek
+                összekapcsolódnak a japán kultúrával és életszemlélettel, kínálva lenyűgöző és inspiráló tapasztalatokat
+                azoknak, akik felfedezik és megtapasztalják ezen területek szépségeit és gazdagságát.</p>
+
+            <p><a href="img/sinto.jpg" target="_blank"><img class="balrazart" src="img/sinto.jpg"
+                        alt="Sintó templom"></a>A hegyi <span class="bold">sintó templomok</span> szintén kiemelkedő
+                részei Japán természeti szépségének. Gyakran a hegyek és erdők mélyén találhatók, harmonikusan
+                illeszkedve a környező tájba és a természet szépségébe. Ezek a templomok, melyek a természettel való
+                harmóniát hangsúlyozzák, fontos szerepet töltenek be a <span class="bold">japán kultúrában és
+                    vallásosságban</span>. Ezek az elemek együttesen mutatják be Japán varázslatos természeti
+                gazdagságát és kulturális örökségét, lenyűgözve és inspirálva azokat, akik részesei lehetnek ennek az
+                elképesztő országnak.</p>
+
+            <hr>
+
+            <article id="galleria">
+                <img src="img/galeria/pexels-ryutaro-tsukata-6249515.jpg" title="Japán híd egy parkban" alt="Ívelt híd nyugodt tó felett egy japán parkban">
+                <img src="img/galeria/pexels-ryutaro-tsukata-5746154.jpg" title="Botanikus kert" alt="Fenséges zöld fák a gyepen a tó közelében, a botanikus kertben">
+                <img src="img/galeria/pexels-tirachard-kumtanom-601174.jpg" title="A Fujiyama" alt="Festői kilátás a Fuji-hegyre">
+                <img src="img/galeria/pexels-diego-madrigal-539694.jpg" title="Lótuszvirág" alt="Éppen kihajtó lótuszvirág egy japán tóban">
+                <img src="img/galeria/pexels-casia-charlie-2425464.jpg" title="Japán kastély" alt="Ötszintes tradícionális japán kastély egy erdő szomszédságában">
+                <img src="img/galeria/pexels-snapwire-234510.jpg" title="Japán ívelt híd" alt="Jellegzetes piros, ívelt fahíd Japánban">
+                <img src="img/galeria/pexels-nelson-cartagena-11742670.jpg" title="Japán kert" alt="Aprólékosan rendezett japán kert, dísznövényekkel">
+                <img src="img/galeria/pexels-ryutaro-tsukata-5745779.jpg" title="Utcakép egy japán faluban" alt="Tradícionális építészet, Pagoda tetők">
+            </article>
+
+
+            <a class="kicsi">(forrás: OpenAI ChatGPT 3.5)</a>
+        </article>
+    </div> <!-- container vége -->
+
+    <footer id="foot">
+        <a href="olvassel.txt" target="_blank">Olvass el!</a>
+        <a class="kicsi">Az oldal kizárólag oktatási célra készült!</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

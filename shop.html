@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Japán bemutatása, tanuló weboldal">
+    <meta name="author" content="Simon Patrik">
+    <meta name="copyright" content="Tanulási célra">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link href="style.css" rel="stylesheet">
+    <title>Japán kultúra - Shop</title>
+    <script src="galleria-1.6.1/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div></div> <!-- üres div a flexbox miatt :) -->
+        <a href="index.html" title="Kattints ide a főoldalhoz!">
+            <table id="logo">
+                <tr>
+                    <td class="td_logo">
+                        <p class="cim"><span class="piros">●</span> Japán kultúra 日本</p>
+                        <p class="cim2">Természet — Ipar — Hagyományok</p>
+                    <td class="td_logo">
+                        <hr id="hr_logo">
+                    <td class="td_logo"><img id="hollo" src="img/hollo.svg" alt="Holló"></td>
+                </tr>
+            </table>
+        </a>
+        <div id="nightmode"><a href="#"><img id="nightmode2" src="img/nightmode.svg" alt="Éjszakai mód"></a>
+        </div>
+    </header>
+    <div class="container"> <!-- container -->
+        <nav> <!-- menürendszer  -->
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="termeszet.html">Természet</a></li>
+                <li><a href="ipar.html">Ipar</a></li>
+                <li><a href="hagyomanyok.html">Hagyományok</a></li>
+                <li><a class="active" href="#">- Shop -</a></li>
+            </ul>
+        </nav>
+
+        <article id="felsoarticle">
+            <h1>Japán kultúra - Shop ⛩️</h1>
+            <h3>Tudtad?</h3>
+            <p>
+                Tudtad-e, hogy a Japánban hagyományosan <span class="bold">Hanko (判子)</span> pecséteket használnak
+                aláírás helyett? Ezek az egyedi pecsétek, amelyeket "inkan"-nak (印鑑) is neveznek, személyes
+                azonosítóként szolgálnak hivatalos dokumentumokhoz vagy alkalmi levelekhez. Fából készült, kézzel
+                faragott pecsétek, amelyek a tulajdonos nevét vagy egyedi jelzését tartalmazzák, és használják őket
+                üzleti tranzakciókhoz, bankszámlanyitáshoz, hivatalos okmányokhoz is.
+            </p>
+        </article>
+        <aside id="vicc">
+            <h3>Ettől lefáradsz!😉</h3>
+            <p>Hogy hívják a japán kannibált?<br> - Mukia Kajama</p>
+        </aside>
+
+        <article id="shop1">
+            <h3>Áruházunk kínálata:</h3>
+            <hr>
+            <p class="arnyek">Válassz a termékek közül, add meg a darabszámot majd helyezd a kosárba!</p>
+            <table id="aruhaztabla">
+                <tr>
+                    <td class="aruhaz"><a href="img/origamikeszlet.jpg" target="_blank"><img class="shopkep"
+                                src="img/origamikeszlet.jpg" alt="Origami készlet, 100db-os"></a>
+                        <br>
+                        <a>Origami készlet, 100db-os<br>Ár: 3.990 Ft</a>
+                        <br>
+                        <input id="termek1" type="number" placeholder="db" min="0">
+                        <input id="kosarba1" type="button" value="Kosárba">
+                    </td>
+
+                    <td class="aruhaz"><a href="img/evopalcika.jpg" target="_blank"><img class="shopkep"
+                                src="img/evopalcika.jpg" alt="Evőpálcika készlet, 5 pár"></a>
+                        <br>
+                        <a>Evőpálcika készlet, 5 pár<br>Ár: 1.890 Ft</a>
+                        <br>
+                        <input id="termek2" type="number" placeholder="db" min="0">
+                        <input id="kosarba2" type="button" value="Kosárba">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="aruhaz"><a href="img/hanko.jpg" target="_blank"><img class="shopkep" src="img/hanko.jpg"
+                                alt="Egyedi Hanko (判子) gyártás"></a>
+                        <br>
+                        <a>Egyedi Hanko (判子) gyártása<br>Ár: 8.700Ft</a>
+                        <br>
+                        <input id="termek3" type="number" placeholder="db" min="0">
+                        <input id="kosarba3" type="button" value="Kosárba">
+                    </td>
+
+                    <td class="aruhaz"><a href="img/yanagiba.jpg" target="_blank"><img class="shopkep"
+                                src="img/yanagiba.jpg" alt="Japán szakácskés (Yanagiba) 24cm"></a>
+                        <br>
+                        <a>Japán szakácskés (Yanagiba) 24cm<br>Ár: 20.490 Ft</a>
+                        <br>
+                        <input id="termek4" type="number" placeholder="db" min="0">
+                        <input id="kosarba4" type="button" value="Kosárba">
+                    </td>
+                </tr>
+            </table>
+        </article>
+
+        <article id="shop2">
+            <h3>Megrendelés adatai:</h3>
+            <hr>
+            <p class="arnyek">
+                A fuvarköltség (MPL futárszolgálat) 1.990 Ft, minden <span class="bold">20.000 Forintot meghaladó</span>
+                végösszegű rendelésnél <span class="bold">a házhozszállítás ingyenes!</span><br>Csomagpontra és
+                csomagautomatába történő kiszállítás jelenleg nem elérhető!</p>
+            <table id="megrendeles">
+                <tr>
+                    <td class="szurke" colspan="4"><a>Kosár tartalma:</a></td>
+                </tr>
+                <tr>
+                    <td class="bal" colspan="4"><a>[kosár]</a>
+                        <p>
+                            Termékek összege:
+                            <br>
+                            Fuvarköltség:
+                        </p>
+                        <p>
+                            Végösszeg:
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="szurke"><a>Kapcsolattartó adatok:</a></td>
+                    <td colspan="2" class="szurke"><a>Szállítási/számlázási adatok:</a></td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="jobb"><a>Email:<br>Név:<br>Telefonszám:<br></a></td>
+                    <td rowspan="2">
+                        <input type="email">
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="tel">
+                    </td>
+                    <td class="bal" colspan="2"><a><span class="bold">Átvétel módja:</span></a><br>
+                        <label><a>Személyes átvétel</a><input type="radio" name="futar"></label>
+                        <br>
+                        <label><a>Futárszolgálat</a><input type="radio" name="futar"></label>
+                    </td>
+                    <tr>
+                        <td class="jobb">
+                            <p>Név:<br>Ország:<br>Irányítószám:<br>Település:<br>Utca, házszám:<br></p>
+                        </td>
+                        <td>
+                            <input type="text"><br>
+                            <input type="text"><br>
+                            <input type="number"><br>
+                            <input type="text"><br>
+                            <input type="text">
+                        </td>
+                    </tr>
+                </tr>
+                <tr>
+                    <td class="szurke" colspan="4"><a>Megjegyzés a rendeléshez:</a></td>
+                </tr>
+                <tr><td colspan="4"><textarea id="megjegyzes"></textarea></td></tr>
+                <tr>
+                    <td class="szurke" colspan="4">
+                        <label><a>Szeretnék feliratkozni a hírlevélre</a><input id="hirlevel"
+                                type="checkbox"></label><br>
+                        <input id="kosartorlogomb" type="button" value="Kosár törlése">
+                        <input id="rendelesgomb" type="button" value="Megrendelés">
+                    </td>
+                </tr>
+            </table>
+        </article>
+    </div> <!-- container vége -->
+
+    <footer id="foot">
+        <a href="olvassel.txt" target="_blank">Olvass el!</a>
+        <a class="kicsi">Az oldal kizárólag oktatási célra készült!</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

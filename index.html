@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Japán bemutatása, tanuló weboldal">
+    <meta name="author" content="Simon Patrik">
+    <meta name="copyright" content="Tanulási célra">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link href="style.css" rel="stylesheet">
+    <title>Japán kultúra - Főoldal</title>
+</head>
+
+<body>
+    <header>
+        <div></div> <!-- üres div a flexbox miatt :) -->
+        <a href="#" title="Kattints ide a főoldalhoz!">
+            <table id="logo">
+                <tr>
+                    <td class="td_logo">
+                        <p class="cim"><span class="piros">●</span> Japán kultúra 日本</p>
+                        <p class="cim2">Természet — Ipar — Hagyományok</p>
+                    <td class="td_logo">
+                        <hr id="hr_logo">
+                    <td class="td_logo"><img id="hollo" src="img/hollo.svg" alt="Holló"></td>
+                </tr>
+            </table>
+        </a>
+        <div id="nightmode"><a href="#"><img id="nightmode2" src="img/nightmode.svg" alt="Éjszakai mód"></a>
+        </div>
+    </header>
+    <div class="container"> <!-- container -->
+        <nav> <!-- menürendszer  -->
+            <ul>
+                <li><a class="active" href="#">Főoldal</a></li>
+                <li><a href="termeszet.html">Természet</a></li>
+                <li><a href="ipar.html">Ipar</a></li>
+                <li><a href="hagyomanyok.html">Hagyományok</a></li>
+                <li><a href="shop.html">- Shop -</a></li>
+            </ul>
+        </nav>
+
+        <article id="felsoarticle">
+            <h1>Japán kultúra - Főoldal ⛩️</h1>
+            <h3>Kedves Idelátogató!</h3>
+            <p>
+                Üdvözöllek a weboldalamon, amely a lenyűgöző Japán sokszínűségét és szépségét hivatott bemutatni! Fedezd fel a szigetország varázslatos természeti kincseit, ismerd meg a japán kézműves és nehézipart és nyerj betekintést a japánok életszemléletébe és hagyományaiba!</p>
+            <p><span class="bold">Természet - Ipar - Hagyományok
+                    <br>Üdv Japánban!
+                </span>
+            </p>
+        </article>
+        <aside id="vicc">
+            <h3>Ettől lefáradsz!😉</h3>
+            <p>Hogy hívják a japán segédmunkást?<br> - Magaszaki Ajdecsóró</p>
+        </aside>
+
+        <aside id="terkep">
+            <h3>Japán prefektúrái</h3>
+            <a href="img/terkep.png" target="_blank"><img id="terkep2" src="img/terkep.png" alt="Japán térkép"></a>
+            <p>Tokióban most ennyi az idő:<br><a id="japanido"></a><br>Ezért ott most így köszönnek:<br><a id="koszones"></a></p>
+            
+            
+        </aside>
+
+        <article id="foelem">
+            <h3>KVÍZJÁTÉK!<br>Kíváncsi vagy, hogy mennyire ismered Japánt? Teszteld a tudásod!🎓</h3>
+            <hr>
+            <p>Érd el a lehető legtöbb pontot!... de ne csüggedj, ha nem sikerül!<br>Az aloldalakon a legtöbb infó megtalálható a teszthez! Ha átolvastad, próbáld meg újra!
+                <br>Sok sikert!!</p>
+            <form name="kvizjatek" onsubmit="return false"> <!-- ez az onsubmit azért kell, hogy ne ugorjon fel az oldal tetejére -->
+
+                <table id="kviztabla">
+                    <tr>
+                        <td>
+                            <p id="kerdes1szin"><span class="bold">1. kérdés:</span> Hogy hívják Japán leghíresebb vulkánját, Honshū szigetén?<br>(válassz egyet!)</p>
+                            <select id="kerdes1" size="3">
+                                <option>Fukushima</option>
+                                <option>Fujiyama</option> <!-- jó válasz -->
+                                <option>Yokohama</option>
+                            </select>
+                        </td>
+                        <td>
+                            <p id="kerdes5szin"><span class="bold">5. kérdés:</span> Hogy hívják Tokió híres elektronikai bazárját?</p>
+                            <label><input type="radio" name="kerdes5" id="kerdes5_1">
+                                <a>Fujitsu-piac</a></label><br>
+                            <label><input type="radio" name="kerdes5" id="kerdes5_2">
+                                <a>Tokugawa</a></label><br>
+                            <label><input type="radio" name="kerdes5" id="kerdes5_3">
+                                <a>Akihabara</a></label> <!-- ez a jó válasz -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p id="kerdes2szin"><span class="bold">2. kérdés:</span> Ki NEM volt szamuráj az alábbiak közül?
+                                <br>(több válasz is lehetséges!)</p>
+                            <label><input type="checkbox" id="kerdes2_1"><a>Bruce Lee</a></label><br> <!-- ő nem volt szamuráj -->
+                            <label><input type="checkbox" id="kerdes2_2"><a>Miyamoto Musashi</a></label><br>
+                            <label><input type="checkbox" id="kerdes2_3"><a>Zámbó Jimmy</a></label><br> <!-- ő nem volt szamuráj -->
+                            <label><input type="checkbox" id="kerdes2_4"><a>Hattori Hanzō</a></label> <!-- ő nem volt szamuráj -->
+                        </td>
+                        <td>
+                            <p id="kerdes6szin"><span class="bold">6. kérdés:</span> Mi a japán papírhajtogatás művészetének neve?</p>
+                            <label><input type="radio" name="kerdes6" id="kerdes6_1"> <!-- ez a jó válasz --> 
+                                <a>Origami</a></label><br>
+                            <label><input type="radio" name="kerdes6" id="kerdes6_2">
+                                <a>Kurosawa</a></label><br>
+                            <label><input type="radio" name="kerdes6" id="kerdes6_3">
+                                <a>Kamikaze</a></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p id="kerdes3szin"><span class="bold">3. kérdés:</span> Mi Japán fővárosa?</p>
+                            <input type="text" id="kerdes3" placeholder="Ide írd be 'magyarosan'!" size="17"> <!-- azt hogy: Tokió -->
+                        </td>
+                        <td>
+                            <p id="kerdes7szin"><span class="bold">7. kérdés:</span> Hogy hívják a nagysebességű vasutat Japánban?</p>
+                            <label><input type="radio" name="kerdes7" id="kerdes7_1">
+                                <a>Watanabe-Kyushu</a></label><br>
+                            <label><input type="radio" name="kerdes7" id="kerdes7_2">
+                                <a>Shinkansen</a></label><br> <!-- ez a jó válasz -->
+                            <label><input type="radio" name="kerdes7" id="kerdes7_3">
+                                <a>Omae wa mou shindeiru</a></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p id="kerdes4szin"><span class="bold">4. kérdés:</span> Az Üvegtigris c. filmben Cingár szerint a sushi:
+                            </p>
+                            <label><input type="radio" name="kerdes4" id="kerdes4_1"><a>Zöldséges nyers
+                                    hal</a></label><br> <!-- ez a jó válasz -->
+                            <label><input type="radio" name="kerdes4" id="kerdes4_2"><a>Nyúlkaja</a></label><br>
+                            <label><input type="radio" name="kerdes4" id="kerdes4_3"><a>Tökfőzelék</a></label>
+                        </td>
+                        <td>
+                            <p id="kerdes8szin"><span class="bold">8. kérdés:</span> Hogy hívják a japán kertészetben a törpefákat?<br>
+                            </p>
+                            <select id="kerdes8" size="4">
+                                <option>Son Goku</option>
+                                <option>Hakosuka</option>
+                                <option>Bonsai</option> <!-- jó válasz -->
+                                <option>Hachi-Roku</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+                <p>Elkészültél? Akkor <input id="kviz" type="submit" value="Ellenőrizd">!<br>
+                    Elrontottad? Akkor <input id="torold" type="reset" value="Töröld">!</p>
+                <a id="kihagy"></a>
+                <a id="pont"></a>
+
+            </form>
+        </article>
+    </div> <!-- container vége -->
+
+    <footer id="foot">
+        <a href="olvassel.txt" target="_blank">Olvass el!</a>
+        <a class="kicsi">Az oldal kizárólag oktatási célra készült!</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
