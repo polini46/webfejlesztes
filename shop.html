@@ -113,10 +113,10 @@
                 csomagautomatába történő kiszállítás jelenleg nem elérhető!</p>
             <table id="megrendeles">
                 <tr>
-                    <td class="szurke" colspan="4"><a>Kosár tartalma:</a></td>
+                    <td class="szurke" colspan="2"><a>Kosár tartalma:</a></td>
                 </tr>
                 <tr>
-                    <td class="bal" colspan="4"><a>[kosár]</a>
+                    <td class="bal" colspan="2"><a>[kosár]</a>
                         <p>
                             Termékek összege:
                             <br>
@@ -128,42 +128,35 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2" class="szurke"><a>Kapcsolattartó adatok:</a></td>
-                    <td colspan="2" class="szurke"><a>Szállítási/számlázási adatok:</a></td>
+                    <td class="szurke"><a>Kapcsolattartó adatok:</a></td>
+                    <td class="szurke"><a>Szállítási/számlázási adatok:</a></td>
                 </tr>
                 <tr>
-                    <td rowspan="2" class="jobb"><a>Email:<br>Név:<br>Telefonszám:<br></a></td>
-                    <td rowspan="2">
-                        <input type="email">
-                        <br>
-                        <input type="text">
-                        <br>
-                        <input type="tel">
-                    </td>
-                    <td class="bal" colspan="2"><a><span class="bold">Átvétel módja:</span></a><br>
+                    <td rowspan="2" class="jobb">
+                        <a class="reszponziv">Email: <input type="email"><br>
+                            Név: <input type="text"><br>
+                            Telefonszám: <input type="tel"></a></td>
+                    <td class="bal"><a><span class="bold">Átvétel módja:</span></a><br>
                         <label><a>Személyes átvétel</a><input type="radio" name="futar"></label>
                         <br>
                         <label><a>Futárszolgálat</a><input type="radio" name="futar"></label>
                     </td>
                     <tr>
                         <td class="jobb">
-                            <p>Név:<br>Ország:<br>Irányítószám:<br>Település:<br>Utca, házszám:<br></p>
-                        </td>
-                        <td>
-                            <input type="text"><br>
-                            <input type="text"><br>
-                            <input type="number"><br>
-                            <input type="text"><br>
-                            <input type="text">
+                            <a class="reszponziv">Név: <input type="text"><br>
+                                Ország: <input type="text"><br>
+                                Irányítószám: <input type="number"><br>
+                                Település: <input type="text"><br>
+                                Utca, házszám: <input type="text"></a>
                         </td>
                     </tr>
                 </tr>
                 <tr>
-                    <td class="szurke" colspan="4"><a>Megjegyzés a rendeléshez:</a></td>
+                    <td class="szurke" colspan="2"><a>Megjegyzés a rendeléshez:</a></td>
                 </tr>
-                <tr><td colspan="4"><textarea id="megjegyzes"></textarea></td></tr>
+                <tr><td colspan="2"><textarea id="megjegyzes"></textarea></td></tr>
                 <tr>
-                    <td class="szurke" colspan="4">
+                    <td class="szurke" colspan="2">
                         <label><a>Szeretnék feliratkozni a hírlevélre</a><input id="hirlevel"
                                 type="checkbox"></label><br>
                         <input id="kosartorlogomb" type="button" value="Kosár törlése">
