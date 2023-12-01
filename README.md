@@ -1,13 +1,6 @@
 # Budapesti Corvinus Egyetem
 
-  ___         _                  _   _    ___             _               ___               _             
- | _ )_  _ __| |__ _ _ __ ___ __| |_(_)  / __|___ _ ___ _(_)_ _ _  _ ___ | __|__ _ _  _ ___| |_ ___ _ __  
- | _ | || / _` / _` | '_ / -_(_-|  _| | | (__/ _ | '_\ V | | ' | || (_-< | _|/ _` | || / -_|  _/ -_| '  \ 
- |___/\_,_\__,_\__,_| .__\___/__/\__|_|  \___\___|_|  \_/|_|_||_\_,_/__/ |___\__, |\_, \___|\__\___|_|_|_|
-                    |_|                                                      |___/ |__/                   
-
 ______________________________________________________________________________________
-
 
 1. Oldal készítője: Simon Patrik
 
@@ -22,7 +15,7 @@ ________________________________________________________________________________
    c) Japán időzónája szerinti óra és a napszaknak megfelelő köszönés (a bal oldali aside panel-en, kivétel a Shop aloldal)
 
 5. Alright Sans Black (a Budapesti Corvinus Egyetem logójában használt betűtípus).
-   > Felhasználási helyek: a weboldal logójában és a felső article <h1> tag-jében.
+   > Felhasználási helyek: a weboldal logójában és a felső article h1 tag-jében.
 
 6. A weboldalon nincs külső forrásból származó kód.
 
