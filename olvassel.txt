@@ -10,7 +10,7 @@ ________________________________________________________________________________
 
 1. Oldal készítője: Simon Patrik
 
-2. A weblap URL címe:
+2. A weblap URL címe: https://polini46.github.io/webfejlesztes/
 
 3. A weboldal Japán sokszínűségét kívánja bemutatni, a szigetország szépségét és a japánok életszemléletét szem előtt tartva, melynek mottója: Természet, ipar, hagyományok.
    A weboldalon egy kezdetleges "webshop"-szerű rendelési felület is található.
