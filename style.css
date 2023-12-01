@@ -67,7 +67,7 @@ table#kviztabla {
 }
 
 td{
-    border: 1px solid red;
+    border: 1px solid #666666;
     padding: 8px;
 }
 
@@ -250,7 +250,7 @@ article#foelem4 {
 }
 
 article#galleria {
-    background-color: none;
+    background-color: transparent;
     /*margin: 0px;*/
     padding: 0px;
     /*box-shadow: none;*/
@@ -422,7 +422,7 @@ input#termek1,input#termek2,input#termek3,input#termek4{
 }
 
 input[type='email'],input[type='text'],input[type='tel'],input[type='number']{
-    width: 22vw;
+    width: 20vw;
 }
 
 textarea{
@@ -573,6 +573,7 @@ iframe {
     }
     input[type='email'],input[type='text'],input[type='tel'],input[type='number']{
         width: calc(18vw - 80px);
+        max-width: 250px;
     }
     a.reszponziv{
         font-size:calc(30% + 0.7vw);
