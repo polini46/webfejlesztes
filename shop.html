@@ -10,7 +10,87 @@
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link href="style.css" rel="stylesheet">
     <title>Japán kultúra - Shop</title>
-    <script src="galleria-1.6.1/jquery-3.7.1.min.js"></script>
+    <script src="js/galleria-1.6.1/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myform").validate({
+                
+                messages: {
+                    email: "<br>Kérlek valós email címet adj meg!",
+                    nev1: "<br>Kérlek írd be a neved!",
+                    telszam: "<br>Kérlek adj meg egy telefonszámot!",
+                    futar: "<br>Kérlek válassz átvételi módot!",
+                    nev2: "<br>Kérlek írd be a neved!",
+                    orszag: "<br>Kérlek írd be az országot!",
+                    irszam: "<br>Kérlek add meg az irányítószámot!",
+                    telepules: "<br>Kérlek add meg a települést!",
+                    cim: "<br>Kérlek add meg a pontos címet!",
+                    holhallottal: "<br>Kérlek pontosan add meg az URL címet!",
+                    elfogad: "<br>Kérlek fogadd el a feltételeinket!",
+                },
+
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    nev1: {
+                        required: true,
+                        minlength: 3,
+                    },
+                    telszam: {
+                        required: true,
+                        number: true,
+                        rangelength: [10, 11],
+                    },
+                    futar: "required",
+                    nev2: {
+                        required: true,
+                        minlength: 3,
+                    },
+                    orszag: "required",
+                    irszam: {
+                        required: true,
+                        number: true,
+                        rangelength: [4, 4],
+                    },
+                    telepules: "required",
+                    cim: "required",
+                    holhallottal: "url",
+                    elfogad: "required",
+
+                    /*
+                    
+                    7 különböző beviteli típusú beviteli űrlapelem:
+                        1. email
+                        2. text
+                        3. radio
+                        4. checkbox
+                        5. textarea
+                        6. number
+                        7. url
+
+                    5 különböző típusú (jQuery-vel) levalidált űrlapelem:
+                        1. email
+                        2. text (required)
+                        3. number
+                        4. checkbox (true)
+                        5. url
+                    
+                    */
+                    
+                    
+                }}
+                )});
+    </script>
+    <style>
+        label.error {
+            font-size: 12pt;
+            font-family: 'Calibri';
+            font-weight: bold;
+        color: #FB3A3A}
+    </style>
 </head>
 
 <body>
@@ -69,7 +149,7 @@
                         <br>
                         <a>Origami készlet, 100db-os<br>Ár: 3.990 Ft</a>
                         <br>
-                        <input id="termek1" type="number" placeholder="db" min="0">
+                        <input id="termek1db" type="number" placeholder="db" min="0">
                         <input id="kosarba1" type="button" value="Kosárba">
                     </td>
 
@@ -78,7 +158,7 @@
                         <br>
                         <a>Evőpálcika készlet, 5 pár<br>Ár: 1.890 Ft</a>
                         <br>
-                        <input id="termek2" type="number" placeholder="db" min="0">
+                        <input id="termek2db" type="number" placeholder="db" min="0">
                         <input id="kosarba2" type="button" value="Kosárba">
                     </td>
                 </tr>
@@ -88,7 +168,7 @@
                         <br>
                         <a>Egyedi Hanko (判子) gyártása<br>Ár: 8.700Ft</a>
                         <br>
-                        <input id="termek3" type="number" placeholder="db" min="0">
+                        <input id="termek3db" type="number" placeholder="db" min="0">
                         <input id="kosarba3" type="button" value="Kosárba">
                     </td>
 
@@ -97,7 +177,7 @@
                         <br>
                         <a>Japán szakácskés (Yanagiba) 24cm<br>Ár: 20.490 Ft</a>
                         <br>
-                        <input id="termek4" type="number" placeholder="db" min="0">
+                        <input id="termek4db" type="number" placeholder="db" min="0">
                         <input id="kosarba4" type="button" value="Kosárba">
                     </td>
                 </tr>
@@ -111,61 +191,84 @@
                 A fuvarköltség (MPL futárszolgálat) 1.990 Ft, minden <span class="bold">20.000 Forintot meghaladó</span>
                 végösszegű rendelésnél <span class="bold">a házhozszállítás ingyenes!</span><br>Csomagpontra és
                 csomagautomatába történő kiszállítás jelenleg nem elérhető!</p>
-            <table id="megrendeles">
-                <tr>
-                    <td class="szurke" colspan="2"><a>Kosár tartalma:</a></td>
-                </tr>
-                <tr>
-                    <td class="bal" colspan="2"><a>[kosár]</a>
-                        <p>
-                            Termékek összege:
+
+            <form action="http://szamtud.uni-corvinus.hu/receive.php" method="post" id="myform" novalidate>
+                <table id="megrendeles">
+                    <tr>
+                        <td class="szurke" colspan="2"><a>Kosár tartalma:</a></td>
+                    </tr>
+                    <tr>
+                        <td class="bal" colspan="2">
+                            <a id="kosar_origami"></a>
+                            <a id="kosar_evopalcika"></a>
+                            <a id="kosar_hanko"></a>                            
+                            <a id="kosar_yanagiba"></a>
+                            <p>
+                                <a id="termekosszeg">Termékek összege: </a>
+                                <br>
+                                <a id="fuvarkoltseg">Fuvarköltség: </a>
+                            </p>
+                            <p>
+                                <a id="vegosszeg">Végösszeg: </a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="szurke"><a>Kapcsolattartó adatok:</a></td>
+                        <td class="szurke"><a>Szállítási/számlázási adatok:</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="jobb">
+                            <label for="email"><a class="reszponziv">Email: </a></label>
+                                <input type="text" name="email" id="email"><br>
+                            <label for="nev1"><a class="reszponziv">Név: </a></label>
+                                <input type="text" name="nev1" id="nev1"><br>
+                            <label for="telszam"><a class="reszponziv">Telefonszám: </a></label>
+                                <input type="text" name="telszam" id="telszam" placeholder="pl.: 06201234567">
+                        </td>
+                        <td class="bal"><a><span class="bold">Átvétel módja:</span></a><br>
+                            <label for="szemelyesatvetel"><a>Személyes átvétel</a></label>
+                                <input type="radio" name="futar" id="szemelyesatvetel" value="szemelyesatvetel">
                             <br>
-                            Fuvarköltség:
-                        </p>
-                        <p>
-                            Végösszeg:
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="szurke"><a>Kapcsolattartó adatok:</a></td>
-                    <td class="szurke"><a>Szállítási/számlázási adatok:</a></td>
-                </tr>
-                <tr>
-                    <td rowspan="2" class="jobb">
-                        <label><a class="reszponziv">Email: </a><input type="email"></label><br>
-                        <label><a class="reszponziv">Név: </a><input type="text"></label><br>
-                        <label><a class="reszponziv">Telefonszám: </a><input type="tel"></label>
-                    </td>
-                    <td class="bal"><a><span class="bold">Átvétel módja:</span></a><br>
-                        <label><a>Személyes átvétel</a><input type="radio" name="futar"></label>
-                        <br>
-                        <label><a>Futárszolgálat</a><input type="radio" name="futar"></label>
-                    </td>
-                <tr>
-                    <td class="jobb">
-                        <label><a class="reszponziv">Név: </a><input type="text"><br></label>
-                        <label><a class="reszponziv">Ország: </a><input type="text"><br></label>
-                        <label><a class="reszponziv">Irányítószám: </a><input type="number"><br></label>
-                        <label><a class="reszponziv">Település: </a><input type="text"><br></label>
-                        <label><a class="reszponziv">Utca, házszám: </a><input type="text"></label>
-                    </td>
-                </tr>
-                <tr>
-                <td class="szurke" colspan="2"><a>Megjegyzés a rendeléshez:</a></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><textarea id="megjegyzes"></textarea></td>
-                </tr>
-                <tr>
-                    <td class="szurke" colspan="2">
-                        <label><a>Szeretnék feliratkozni a hírlevélre</a><input id="hirlevel"
-                                type="checkbox"></label><br>
-                        <input id="kosartorlogomb" type="button" value="Kosár törlése">
-                        <input id="rendelesgomb" type="button" value="Megrendelés">
-                    </td>
-                </tr>
-            </table>
+                            <label for="futarszolgalat"><a>Futárszolgálat</a></label>
+                                <input type="radio" name="futar" id="futarszolgalat" value="futarszolgalat">
+                        </td>
+                    <tr>
+                        <td class="jobb">
+                            <label for="nev2"><a class="reszponziv">Név: </a></label>
+                                <input type="text" name="nev2" id="nev2"><br>
+                            <label for="orszag"><a class="reszponziv">Ország: </a></label>
+                                <input type="text" name="orszag" id="orszag"><br>
+                            <label for="irszam"><a class="reszponziv">Irányítószám: </a></label>
+                                <input type="text" name="irszam" id="irszam"><br>
+                            <label for="telepules"><a class="reszponziv">Település: </a></label>
+                                <input type="text" name="telepules" id="telepules"><br>
+                            <label for="cim"><a class="reszponziv">Utca, házszám: </a></label>
+                                <input type="text" name="cim" id="cim">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="szurke" colspan="2"><a>Megjegyzés a rendeléshez:</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <textarea name="megjegyzes"></textarea><br>
+                            <label for="holhallottal"><a>Melyik weboldalon olvastál rólunk?</a><br><a class="kicsi">(nem kötelező)</a></label><br>
+                                <input type="text" name="holhallottal" id="holhallottal" value="https://">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="szurke" colspan="2">
+                            <label for="elfogad"><a>Elfogadom a vásárlási feltételeket</a></label>
+                                <input id="elfogad" name="elfogad" type="checkbox"><br>
+                            <label for="hirlevel"><a>Szeretnék feliratkozni a hírlevélre</a></label>
+                                <input id="hirlevel" name="hirlevel" type="checkbox"><br>
+                            <input id="kosartorlogomb" type="reset" value="Törlés">
+                            <input id="rendelesgomb" type="submit" value="Megrendelés">
+                        </td>
+                    </tr>
+                </table>
+            </form>
         </article>
     </div> <!-- container vége -->
 
@@ -173,7 +276,7 @@
         <a href="olvassel.txt" target="_blank">Olvass el!</a>
         <a class="kicsi">Az oldal kizárólag oktatási célra készült!</a>
     </footer>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
