@@ -349,7 +349,7 @@ a#japanido {
     font-size: 14pt;
 }
 
-a.kicsi {
+p.kicsi, a.kicsi {
     font-size: 10pt;
 }
 
